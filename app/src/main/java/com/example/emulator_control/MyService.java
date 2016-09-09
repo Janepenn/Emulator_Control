@@ -25,15 +25,13 @@ public class MyService extends BroadcastReceiver {
                     sm[i]=SmsMessage.createFromPdu((byte[])obj[i]);
                 }
                 for (int i=0;i<length;i++){
-                    sb.append("来自：\n");
                     sb.append(sm[i].getDisplayOriginatingAddress());
-                    sb.append("的短信；");
-                    sb.append("信息为：\n");
+                    sb.append("|");
                     sb.append(sm[i].getMessageBody());
                 }
                 Toast.makeText(
                         context,
-                        sb.toString().trim(),
+                        "收到一条短信！",
                         Toast.LENGTH_SHORT
                 ).show();
                 Intent temintent=new Intent(context,MainActivity.class);
