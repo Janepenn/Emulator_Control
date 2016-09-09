@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.xx);
         EditText et01=(EditText)this.findViewById(R.id.EditText01);
         EditText et02=(EditText)this.findViewById(R.id.EditText02);
-        String[] tempmsg=msg.split("\\|");   //必须进行转义
+        String[] tempmsg=msg.split("\\|");
         et01.setText(tempmsg[0]);
         et02.setText(tempmsg[1]);
     }
