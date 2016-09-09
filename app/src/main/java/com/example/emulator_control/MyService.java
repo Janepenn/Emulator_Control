@@ -37,6 +37,9 @@ public class MyService extends BroadcastReceiver {
                         Toast.LENGTH_SHORT
                 ).show();
                 Intent temintent=new Intent(context,MainActivity.class);
+                Bundle mybundle=new Bundle();
+                mybundle.putString("change",sb.toString().trim());
+                temintent.putExtras(mybundle);
                 temintent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(temintent);
             }
